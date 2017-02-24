@@ -1,0 +1,92 @@
+
+# steam boot problem
+
+ LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
+
+# or 
+
+LD_PRELOAD=/usr/lib32/libudev.so.1 STEAM_RUNTIME=0 steam
+
+# Android studio libgl error 
+
+mv ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6{,.bak}
+mv ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6.0.18{,.bak}
+ln -s /usr/lib/libstdc++.so  ~/Android/Sdk/tools/lib64/libstdc++/
+
+# ssh into rpi at gm
+
+sudo ssh shawnco@192.168.2.12
+sudo ssh pi@192.168.2.12
+
+#House
+
+sudo ssh pi@192.168.0.22
+
+# When raspberry pi will not update
+
+sudo dpkg --configure -a
+
+#nord vpn dns servers
+
+nameserver 162.242.211.137
+nameserver 78.46.223.24   
+
+#My Muxoid packages
+
+plasma
+vlc
+konsole
+dolphin
+firefox
+libreoffice-fresh
+transmission-qt
+blender
+gimp
+gwenview
+gedit
+virtualbox
+git
+kdegraphics-okular
+
+#Tar unzip
+
+tar xvzf file.tar.gz
+
+#Disable Ipv6
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+#Reenable Ipv6
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=0
+
+#SEG website login
+
+user = ceg2136
+pass = ASvx14rn88d6ynWm
+
+# Setting permitions on files
+
+sudo chattr +i filename //imutable even by root
+
+sudo chattr -i filename //undo last
+
+sudo chattr +a filename //can only be appended
+
+sudo chattr -a filename //undo last
+
+#Start Binary Tree java program
+
+java -Xmx256m -Xms64m -jar TreeForm.jar
+
+#For opening eclipse with no crashes
+
+SWT_GTK3=0 eclipse
+
+
+#Custom Bash
+
+PS1="\[\033[0;37m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[1;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[1;31m\]\h'; else echo '\[\033[0;36m\]\u\[\033[0;91m\]@\[\033[0;36m\]\h'; fi)\[\033[0;37m\]]\342\224\200[\[\033[1;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]"
+
