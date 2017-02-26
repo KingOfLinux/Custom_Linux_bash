@@ -13,15 +13,6 @@ mv ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6{,.bak}
 mv ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6.0.18{,.bak}
 ln -s /usr/lib/libstdc++.so  ~/Android/Sdk/tools/lib64/libstdc++/
 
-# ssh into rpi at gm
-
-sudo ssh shawnco@192.168.2.12
-sudo ssh pi@192.168.2.12
-
-#House
-
-sudo ssh pi@192.168.0.22
-
 # When raspberry pi will not update
 
 sudo dpkg --configure -a
