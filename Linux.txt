@@ -7,6 +7,10 @@
 
 LD_PRELOAD=/usr/lib32/libudev.so.1 STEAM_RUNTIME=0 steam
 
+Civ Boot issue
+
+LD_PRELOAD=/usr/lib32/libopenal.so.1 %command% 
+
 # Android studio libgl error 
 
 mv ~/Android/Sdk/tools/lib64/libstdc++/libstdc++.so.6{,.bak}
